@@ -1,0 +1,30 @@
+@keyframes orbit-a {
+  0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@keyframes orbit-b {
+  0% { transform: rotate(180deg) translateX(150px) rotate(-180deg); }
+  100% { transform: rotate(540deg) translateX(150px) rotate(-540deg); }
+}
+
+.orbit-btn-a {
+  animation: orbit-a 12s linear infinite;
+}
+
+.orbit-btn-b {
+  animation: orbit-b 12s linear infinite;
+}
+
+@media (max-width: 640px) {
+  @keyframes orbit-a-mobile {
+    0% { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+  }
+  @keyframes orbit-b-mobile {
+    0% { transform: rotate(180deg) translateX(100px) rotate(-180deg); }
+    100% { transform: rotate(540deg) translateX(100px) rotate(-540deg); }
+  }
+  .orbit-btn-a { animation: orbit-a-mobile 12s linear infinite; }
+  .orbit-btn-b { animation: orbit-b-mobile 12s linear infinite; }
+}
